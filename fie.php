@@ -10,3 +10,6 @@ $bst->insert(50);
 $bst->insert(49);
 
 var_dump($bst);
+
+echo(log(
+2539913));
