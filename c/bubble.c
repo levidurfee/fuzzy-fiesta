@@ -18,6 +18,7 @@ int main() {
 
     int n = sizeof(numbers) / sizeof(int);
 
+    printf("Before: \n");
     show_array(numbers, n);
 
     do {
@@ -43,6 +44,7 @@ int main() {
         }
     } while(swap == 1);
 
+    printf("\nAfter: \n");
     show_array(numbers, n);
 
     return 0;
