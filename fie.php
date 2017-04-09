@@ -2,14 +2,25 @@
 
 include('php/BinaryNode.php');
 include('php/BinaryTree.php');
+include('php/Fiesta.php');
 
 $bst = new BinaryTree;
-$bst->insert(40);
-$bst->insert(39);
-$bst->insert(50);
-$bst->insert(49);
 
-var_dump($bst);
+$numbers = [
+	95,
+	62,
+	50,
+	20,
+	87,
+	25,
+	89,
+];
 
-echo(log(
-2539913));
+$c[0] = md5(serialize($numbers));
+
+$fiesta = new Fiesta;
+$numbers = $fiesta->bubbleSort($numbers);
+
+$c[1] = md5(serialize($numbers));
+
+var_dump($numbers);
