@@ -34,9 +34,9 @@ class BinaryTree {
 }
 
 let binaryTree = new BinaryTree;
-binaryTree.insert(50);
-binaryTree.insert(40);
-binaryTree.insert(60);
-binaryTree.insert(19);
-binaryTree.insert(20);
+
+var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47];
+for(let i=0; i<primes.length; i++) {
+	binaryTree.insert(primes[i]);
+}
 console.log(binaryTree);
