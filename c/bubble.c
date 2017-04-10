@@ -5,15 +5,20 @@
 void show_array(int numbers[], int size);
 
 int main() {
-    int swap, iteration, i, large, small = 0;
+    int swap, i, large, small = 0;
     int numbers[] = {
         90,
         80,
         10,
         70,
         55,
-        43
+        43,
+        5,
+        500,
+        499,
+        1
     };
+    int iteration = 0;
 
     int n = sizeof(numbers) / sizeof(int) - 1;
 
@@ -39,6 +44,7 @@ int main() {
             }
 
             iteration++;
+            //printf("i: %i\tmi: %i\n", iteration, max_iteration);
 
             if(iteration >= max_iteration) {
                 swap = 0;
