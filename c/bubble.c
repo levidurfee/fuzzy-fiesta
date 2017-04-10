@@ -5,8 +5,7 @@
 void show_array(int numbers[], int size);
 
 int main() {
-    int iteration = 0;
-    int swap = 0;
+    int swap, iteration, i, large, small = 0;
     int numbers[] = {
         90,
         80,
@@ -18,17 +17,20 @@ int main() {
 
     int n = sizeof(numbers) / sizeof(int);
 
+    int max_iteration = (int) pow(n, 2);
+
     printf("Before: \n");
     show_array(numbers, n);
 
     do {
-        for(int i=0; i<n; i++) {
-            if(i == n) {
+        for(i=0; i<n; i++) {
+            if(i >= n) {
                 continue;
             }
+
             if(numbers[i] > numbers[i + 1]) {
-                int large = numbers[i];
-                int small = numbers[i + 1];
+                large = numbers[i];
+                small = numbers[i + 1];
 
                 numbers[i] = small;
                 numbers[i + 1] = large;
@@ -38,7 +40,7 @@ int main() {
 
             iteration++;
 
-            if(iteration >= pow(n, 2)) {
+            if(iteration >= max_iteration) {
                 swap = 0;
             }
         }
@@ -47,11 +49,12 @@ int main() {
     printf("\nAfter: \n");
     show_array(numbers, n);
 
-    return 0;
+    return 1;
 }
 
 void show_array(int numbers[], int size) {
-    for(int i=0; i<size; i++) {
+    int i;
+    for(i=0; i<size; i++) {
         printf("%i\n", numbers[i]);
     }
 }
