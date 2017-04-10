@@ -15,12 +15,12 @@ int main() {
         43
     };
 
-    int n = sizeof(numbers) / sizeof(int);
+    int n = sizeof(numbers) / sizeof(int) - 1;
 
     int max_iteration = (int) pow(n, 2);
 
     printf("Before: \n");
-    show_array(numbers, n);
+    show_array(numbers, n + 1);
 
     do {
         for(i=0; i<n; i++) {
@@ -47,7 +47,7 @@ int main() {
     } while(swap == 1);
 
     printf("\nAfter: \n");
-    show_array(numbers, n);
+    show_array(numbers, n + 1);
 
     return 1;
 }
